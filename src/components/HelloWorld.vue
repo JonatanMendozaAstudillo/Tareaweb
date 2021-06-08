@@ -87,35 +87,6 @@ export default {
     }
   },
   methods: {
-    completeName (el) {
-      let datoNombre = el.nombre.split(' ')
-      //console.log(datoNombre);
-      
-      var element
-      var nombres = ""
-
-      for (let i = 0; i < datoNombre.length; i++) {
-        element = `${datoNombre[i].charAt(0).toUpperCase()}${datoNombre[i].slice(1)}${' '}`
-        nombres += element
-        //console.log(nombres)
-      }
-
-      let datoApellido = el.apellidos.split(' ')
-      //console.log(datoApellido);
-      var element2
-      var apellidos = ""
-
-      for (let i = 0; i < datoApellido.length; i++) {
-        element2 = `${datoApellido[i].charAt(0).toUpperCase()}${datoApellido[i].slice(1)}${' '}`
-        apellidos += element2
-        //console.log(apellidos)
-      }
-      
-      // let nombre = `${el.nombre.charAt(0).toUpperCase()}${el.nombre.slice(1)}`,
-      //     apellidos = el.apellidos.charAt(0).toUpperCase() + el.apellidos.slice(1)
-          
-      return `${nombres} ${apellidos}`
-    },
     store() { 
       let newUser = {
         id: this.users.length+1,
@@ -126,40 +97,6 @@ export default {
       }
       this.users.push( newUser)
       this.resetInputs()
-    },
-    edit(user) {
-      this.user = {
-        nombre: user.nombre,
-        apellidos: user.apellidos,
-        telefono: user.telefono,
-        correo: user.correo }
-
-      this.create = false,
-      this.userEditID = user.id
-    },
-    resetInputs(){
-      this.user = {nombre: '', apellidos: '', telefono: '', correo: ''}
-      this.create = true
-      this.userEditID = 0
-    },
-    update(){
-      for (let i = 0; i < this.users.length; i++) {
-        if (this.userEditID == this.users[i].id) {
-          this.users[i] = {
-            id: this.users[i].id,
-            nombre: this.user.nombre,
-            apellidos: this.user.apellidos,
-            telefono: this.user.telefono,
-            correo: this.user.correo }
-          }
-      }   
-      this.resetInputs()
-    },
-    erase(id){
-      //console.log("HOLA")
-      let index = this.users.findIndex( ( i ) => i.id == id)
-      if (index != -1) this.users.splice(index,1)
-      
     }
   }
 }
