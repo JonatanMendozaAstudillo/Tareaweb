@@ -125,42 +125,9 @@ export default {
         correo: this.user.correo
       }
       this.users.push( newUser)
-      this.resetInputs()
-    },
-    edit(user) {
-      this.user = {
-        nombre: user.nombre,
-        apellidos: user.apellidos,
-        telefono: user.telefono,
-        correo: user.correo }
-
-      this.create = false,
-      this.userEditID = user.id
-    },
-    resetInputs(){
-      this.user = {nombre: '', apellidos: '', telefono: '', correo: ''}
-      this.create = true
-      this.userEditID = 0
-    },
-    update(){
-      for (let i = 0; i < this.users.length; i++) {
-        if (this.userEditID == this.users[i].id) {
-          this.users[i] = {
-            id: this.users[i].id,
-            nombre: this.user.nombre,
-            apellidos: this.user.apellidos,
-            telefono: this.user.telefono,
-            correo: this.user.correo }
-          }
-      }   
-      this.resetInputs()
-    },
-    erase(id){
-      //console.log("HOLA")
-      let index = this.users.findIndex( ( i ) => i.id == id)
-      if (index != -1) this.users.splice(index,1)
       
     }
+   
   }
 }
 </script>
