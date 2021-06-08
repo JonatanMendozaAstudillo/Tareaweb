@@ -1,0 +1,71 @@
+.btn-primary{
+    background-color: #304269;
+    border-color: #304269;
+    border-radius: 0;
+}
+
+.container-nameList{
+    font-size: 18px;
+}
+
+.no-users{
+    height: 200px;
+    width: 100%;
+    background-color: #D9E8F5;
+    color: #304269;
+    font-size: 18px;
+}
+
+.card-header{
+    background-color: white;
+    border-color: white;
+}
+
+.card{
+    background-color: white;
+    border-color: white;
+}
+
+.ph-center::-webkit-input-placeholder {
+    text-align: center;
+    line-height: 100px;/* Centrado vertical */
+}
+
+.table-head{
+    background-color: #304269;
+    color: white;
+}
+    .table-tittle{
+        font-weight: normal;
+        font-size: 18px;
+    }
+
+.table-body{
+    background-color: white;
+}
+
+    .iconEdit{
+        color: #91BED4;
+        font-size: 30px;
+        padding: 5px;
+    }
+
+    .iconTrash{
+        color: #3168bb;
+        font-size: 30px;
+        padding: 5px;
+    }
+
+.btn-info{
+    background-color: #91BED4;
+    border-color: #91BED4;
+    color: white;
+    font-size: 18px;
+}
+
+.btn-danger{
+    background-color: #F26101;
+    border-color: #F26101;
+    color: white;
+    font-size: 18px;
+}
